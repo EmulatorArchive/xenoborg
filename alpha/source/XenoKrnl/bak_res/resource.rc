@@ -1,0 +1,147 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_XMENU MENU 
+BEGIN
+    POPUP "&File"
+    BEGIN
+        MENUITEM "&Exit",                       ID_FILE_EXIT
+    END
+    POPUP "E&mulation"
+    BEGIN
+        POPUP "&Execute"
+        BEGIN
+            MENUITEM "Xbe",                         ID_EXECUTE_XBE
+            MENUITEM "Bios",                        ID_EXECUTE_BIOS
+        END
+        MENUITEM "&Restart",                    ID_EMULATION_RESTART
+        MENUITEM "&Stop",                       ID_EMULATION_STOP
+    END
+    POPUP "&Options"
+    BEGIN
+        POPUP "&Plugins", INACTIVE
+        BEGIN
+            MENUITEM "&NV2A (GPU)",                 ID_PLUGINS_NV2A
+            MENUITEM "&Audio (AC97 / SoundStorm)",  ID_PLUGINS_AUDIO
+            MENUITEM "Input Devices (&USB)",        ID_PLUGINS_USB
+        END
+        MENUITEM "&Emulator...",                ID_OPTIONS_EMULATOR
+        MENUITEM "&Bios...",                    ID_OPTIONS_BIOS
+        MENUITEM "&Misc...",                    ID_OPTIONS_MISC
+    END
+    POPUP "&Help"
+    BEGIN
+        MENUITEM "&About...",                   ID_HELP_ABOUT
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_BIOS DIALOGEX 0, 0, 200, 94
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "Bios Options"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,81,73,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,143,73,50,14
+    EDITTEXT        IDC_EDIT1,81,17,112,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT2,81,35,112,12,ES_AUTOHSCROLL
+    LTEXT           "Xbox Bios (*.bin)",IDC_STATIC,7,17,74,11
+    LTEXT           "Chihiro Bios (*.zip)",IDC_STATIC,7,35,74,12
+    CONTROL         "Use HLE Bios",IDC_CHECK_HLE_BIOS,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,25,53,94,12
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_BIOS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 193
+        VERTGUIDE, 81
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 87
+        HORZGUIDE, 17
+        HORZGUIDE, 35
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
