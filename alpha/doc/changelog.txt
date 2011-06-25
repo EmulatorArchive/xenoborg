@@ -1,0 +1,11 @@
+//~~~~~~~~~~~~ Xenoborg changelog
+
+5/??/11
+- Got some basic framebuffer emulation to work.
+
+5/2/11
+- Stopped the emulator from crashing when the user starts emulation and
+  decides to exit.  The emulator now backs up the memory range occupided 
+  by the .exe to be restored before the emulator exits.
+
+- Started HLE Kernel function emulation.
