@@ -1,0 +1,38 @@
+|||||||||||||||||||||||||
+|Xenoborg Dev Changelog:|
+|||||||||||||||||||||||||
+
+10/28/11
+- Added some preliminary audio and ac97 emulation code. Not enough to do much
+  and is untested but will test asap. Going to use DirectSound for the time 
+  being until I'm ready to use another more complex API.
+- SIB.scale was not being handled at all.  Added a fix for that and now it 
+  should work properly. Not thoroughly tested, but it appears to work for
+  the comingSoon.xbe OpenXDK sample...
+- comingSoon OpenXDK sample partially works. The screen clear to blue operation
+  just creates blue vertical lines and the coming soon picture doesn't show yet.
+  Crashes instead.
+- The framebuffer pointer is allocated to be 4mb, not just the size of the 
+  screen @ 32-bits.
+
+10/27/11
+- Fixed a nasty instruction decoding bug in emu_cpu.c, the instruction size
+  was not being incremented under certain conditions involving the SIB byte
+  and displacement bytes.  Might still cause problems in the future.
+
+10/25/11
+- Added support for kernel functions via HLE (temporary solution).
+- Implemented the following kernel functions:
+	* DbgPrint
+	* KeTickCount
+	* HalInitiateShutdown
+	
+10/22/11
+- added support for new instructions:
+	IN (all)
+	OUT (all)
+
+10/21/11
+- Fixed a bug in mov (op 0xa0/0xa1) where displacement bytes weren't being used.
+- xbdev.net's asm image sample now draws fine.
+
