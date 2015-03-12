@@ -1,0 +1,1 @@
+An Xbox1 emulator for Windows using LLE and a fairly unique method of direct code execution/static rec. This project was started out of boredom one day, and it started to evolve into something serious.
